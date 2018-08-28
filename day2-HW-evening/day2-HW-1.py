@@ -29,5 +29,6 @@ for count, line in enumerate( f ):
 for Fly, Uni in Map.items(): 
     print(Fly + "\t\t" + Uni)
     i += 1
-    
+
+#Count reads#    
 #print (i)
