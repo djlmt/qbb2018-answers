@@ -22,4 +22,4 @@ for count, line in enumerate( f ):
              
 a = s/t
 
-print("The average MAPQ score is " + str(a) + ""."")
+print("The average MAPQ score is " + str(a) + ".")
