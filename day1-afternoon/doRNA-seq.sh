@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 GENOME=~/qbb2018-answers/genomes/BDGP6
 ANNOTATION=~/qbb2018-answers/genomes/BDGP6.Ensembl.81.gtf
 
