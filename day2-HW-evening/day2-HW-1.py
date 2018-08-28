@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-#Print the unique gene names from a t_data.ctab file
+#Print the unique gene names from a t_data.ctab file#
+#Copy your data to the same folder as this program and run with (e.g. the file name of the data here is fly.txt): ./day2-HW-1.py < fly.txt#
 
 import sys
 import numpy as np
