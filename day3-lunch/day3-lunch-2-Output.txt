@@ -1,4 +1,4 @@
-GeneType Counts
+GeneType Count
 pseudogene 257
 protein_coding 13917
 lincRNA 2366

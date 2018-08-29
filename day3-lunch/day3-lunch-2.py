@@ -38,6 +38,6 @@ for count, line in enumerate( f ):
                 Dic[gene_type] = 1
 
 #Print results#
-print("GeneType " + "Counts")             
+print("GeneType " + "Count")             
 for gene_type, count in Dic.items():
     print(gene_type, count)
