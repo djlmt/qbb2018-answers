@@ -29,10 +29,16 @@ ax.set_xlabel("fpkm1")
 ax.set_ylabel("fpkm2")
 ax.scatter(fpkm1, fpkm2, alpha=0.18, s=1.68, color="blue")
 plt.axis([.001, 10000, .001, 10000])
-#np.polyfit("fpkm1", "fpkm2", 1)
-#ax = plt.gca()
-#fig = plt.gct()
+c = np.polyfit(fpkm1, fpkm2, 1)
+f = np.poly1d(c)
+#print(f)
+x = np.linspace(min(fpkm1),max(fpkm2), 100)
+plt.plot(x, f(x), c = "black")
 fig.savefig( "Scatter.png" )
 plt.close(fig)
+
+
+
+
 
 
