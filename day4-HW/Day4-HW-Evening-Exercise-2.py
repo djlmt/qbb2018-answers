@@ -29,6 +29,7 @@ def Timecourse(gender, C):
         fpkms.append(ctab_df.loc[sys.argv[1],"FPKM"])
         #Plot#
     return fpkms
+    
 #Main#
 fig, ax = plt.subplots() 
 fig.set_size_inches(12, 8)
