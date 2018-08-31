@@ -13,8 +13,8 @@ import pandas as pd
 ctab_file = open( sys.argv[1] )
 
 #Print header#
-head = ["chr", "start", "end", "t_name"]
-print("\t".join(head))
+#head = ["chr", "start", "end", "t_name"]
+#print("\t".join(head))
 
 for i, line in enumerate( ctab_file ):
     if i == 0:
@@ -27,7 +27,7 @@ for i, line in enumerate( ctab_file ):
         bed_order[1] = str(int(bed_order[2])-500)
         #print(bed_order)
         if float(bed_order[1]) < 0:
-            print("test")
+            #print("test")
             bed_order[1] = str(0)
     elif bed_order[1] == "-":
         bed_order[1] = (str(int(bed_order[2])+500))
