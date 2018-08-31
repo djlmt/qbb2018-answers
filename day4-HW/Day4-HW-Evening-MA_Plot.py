@@ -24,8 +24,8 @@ avg = np.log2((df_1.loc[:,"FPKM"]+1)*(df_2.loc[:,"FPKM"]+1))*0.5
 #Plot#
 fig, ax = plt.subplots()
 fig.suptitle("MA Plot of SRR072893 & SRR072896")
-ax.set_xlabel("Avg")
-ax.set_ylabel("fpkm(SRR072893)/fpkm(SRR072896)")
+ax.set_xlabel("Avg_fpkm")
+ax.set_ylabel("log2(fpkm(SRR072893)/fpkm(SRR072896))")
 ax.scatter(avg, ratio, alpha=0.12, s=1.68, color="violet")
 fig.savefig( "MA-Plot.png" )
 plt.close(fig)
