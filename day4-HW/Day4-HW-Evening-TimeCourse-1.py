@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
 """
-Usage: ./Day4-HW-Evening-Exercise-2.py <t_name> <samples.csv> <ctab_dir>
-e.g. ./Day4-HW-Evening-Exercise-2.py FBtr0331261 ~/qbb2018/samples.csv ~/data/results/stringtie
+Usage: ./Day4-HW-Evening-TimeCourse-1.py <t_name> <samples.csv> <ctab_dir>
+e.g. ./Day4-HW-Evening-TimeCourse-1.py FBtr0331261 ~/qbb2018/samples.csv ~/data/results/stringtie
 Plot a second series of FBtr0331261 abundance for both male and female samples. Style the plot similarly to Lott et al., 2011 PLoS Biology.
 """
 
-#def#
+#Import#
 import sys
 import pandas as pd
 import os
@@ -14,9 +14,7 @@ import matplotlib.pyplot as plt
 
 #Function#
 def Timecourse(gender, C):
-
     df = pd.read_csv(sys.argv[2])
-    
     soi = df.loc[:, "sex"] == gender
     df = df.loc[soi,:]
 
