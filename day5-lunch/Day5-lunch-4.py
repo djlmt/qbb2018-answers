@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Usage: ./Day4.sh <tab_file1> <tab_file2> ... <tab_file5> <t_data.ctab>
+Usage: ./Day5.sh <tab_file1> <tab_file2> ... <tab_file4> <t_data.ctab>
 ./Day5-lunch-4.py H3K9ac.tab H3K4me1.tab H3K4me3.tab H3K27me3.tab H3K27ac.tab /Users/cmdb/data/results/stringtie/SRR072893/t_data.ctab
 Copy all data into the folder storing the .py file.
 Perform ordinary linear regression for all of the four marks to determine how predictive each is of gene expression.
