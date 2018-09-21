@@ -1,0 +1,1 @@
+There are 123 contigs. The minimum contig length is 207. The maximum contig length is 1409. The average contif length is 379.8130081300813. The N50 is 335.
