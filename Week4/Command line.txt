@@ -1,0 +1,9 @@
+PCA
+plink --pca 2 --allow-extra-chr --mind --allow-no-sex --vcf BYxRM_segs_saccer3.bam.simplified.vcf 
+
+AF
+plink --freq --allow-extra-chr --mind --allow-no-sex --vcf BYxRM_segs_saccer3.bam.simplified.vcf
+
+Manhattan plot
+awk 'NR>1''{gsub ("_","\t")}{print}' BYxRM_PhenoData.txt > PhenoData.txt
+plink --vcf BYxRM_segs_saccer3.bam.simplified.vcf --pheno PhenoData.txt --assoc --allow-no-sex --mind --allow-extra-chr --all-pheno
