@@ -1,0 +1,7 @@
+  570  conda create -n hifive python=2.7
+  571  conda activate hifive
+  572  conda install -y -c bioconda hifive
+  573  hifive hic-complete express -f 25 -n 50 -i 0 -P hifive_output -M example.mat.raw -B example.bed 
+  574  hifive hic-heatmap -t -b 500000 -d fend -F npz -i 0.5Mb-Heatmap.png hifive_output.hcp HeatmapOUTPUT.npz
+  577  hifive hic-interval -c chr17 -s 15000000 -e 17500000 -b 10000 -d fend hifive_output.hcp -i 10Kb-HiCchr17.png HiC_chr17_output
+  578  history > Week13-Commandline.txt
