@@ -52,7 +52,7 @@ for m in Mid:
 #print Bin
 CTCF=np.unique(Bin)
 
-print(len(CTCF))
+#print(len(CTCF))
 
 for i in range(len(CTCF)):
     for j in range(i,len(CTCF)):
