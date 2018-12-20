@@ -1,0 +1,29 @@
+  544  tar -xvf BYxRM_subset.tar.xv 
+  545  conda install -c bioconda ucsc-twobittofa
+  546  twobittofa sacCer3.2bit sacCer3.fasta
+  547  bwa index -a is sacCer3.fasta  
+  549  bwa mem -t 4 -R "@RG\tID:A1_09\tSM:A1_09" sacCer3.fasta A01_09.fastq  > A01_09.sam 
+  550  bwa mem -t 4 -R "@RG\tID:A1_11\tSM:A1_11" sacCer3.fasta A01_11.fastq  > A01_11.sam 
+  551  bwa mem -t 4 -R "@RG\tID:A1_23\tSM:A1_23" sacCer3.fasta A01_23.fastq  > A01_23.sam 
+  552  bwa mem -t 4 -R "@RG\tID:A1_24\tSM:A1_24" sacCer3.fasta A01_24.fastq  > A01_24.sam 
+  553  bwa mem -t 4 -R "@RG\tID:A1_27\tSM:A1_27" sacCer3.fasta A01_27.fastq  > A01_27.sam 
+  554  bwa mem -t 4 -R "@RG\tID:A1_31\tSM:A1_31" sacCer3.fasta A01_31.fastq  > A01_31.sam 
+  555  bwa mem -t 4 -R "@RG\tID:A1_35\tSM:A1_35" sacCer3.fasta A01_35.fastq  > A01_35.sam 
+  556  bwa mem -t 4 -R "@RG\tID:A1_39\tSM:A1_39" sacCer3.fasta A01_39.fastq  > A01_39.sam 
+  557  bwa mem -t 4 -R "@RG\tID:A1_62\tSM:A1_62" sacCer3.fasta A01_62.fastq  > A01_62.sam 
+  558  bwa mem -t 4 -R "@RG\tID:A1_63\tSM:A1_63" sacCer3.fasta A01_63.fastq  > A01_63.sam 
+  559  samtools sort -O bam -o A01_09.bam A01_09.sam 
+  560  samtools sort -O bam -o A01_11.bam A01_11.sam 
+  561  samtools sort -O bam -o A01_23.bam A01_23.sam 
+  562  samtools sort -O bam -o A01_24.bam A01_24.sam 
+  563  samtools sort -O bam -o A01_27.bam A01_27.sam 
+  564  samtools sort -O bam -o A01_31.bam A01_31.sam 
+  565  samtools sort -O bam -o A01_35.bam A01_35.sam 
+  566  samtools sort -O bam -o A01_39.bam A01_39.sam 
+  567  samtools sort -O bam -o A01_62.bam A01_62.sam 
+  568  samtools sort -O bam -o A01_63.bam A01_63.sam 
+  569  freebayes -f sacCer3.fasta *.bam  --genotype-qualities | vcfallelicprimitives -kg > calls.vcf
+  570  snpEff databases
+  571  snpEff download R64-1-1.86
+  572  snpEff -v R64-1-1.86 calls.vcf > snpEff_calls.vcf
+  574  ./Week-3-Plot.py snpEff_calls.vcf 
