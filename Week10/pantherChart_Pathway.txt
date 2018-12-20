@@ -1,0 +1,21 @@
+1	N-acetylglucosamine metabolism (P02756)	1	0.7%	3.6%
+2	JAK/STAT signaling pathway (P00038)	1	0.7%	3.6%
+3	Alzheimer disease-amyloid secretase pathway (P00003)	1	0.7%	3.6%
+4	Ubiquitin proteasome pathway (P00060)	2	1.3%	7.1%
+5	p53 pathway feedback loops 2 (P04398)	1	0.7%	3.6%
+6	EGF receptor signaling pathway (P00018)	1	0.7%	3.6%
+7	Parkinson disease (P00049)	2	1.3%	7.1%
+8	Cytoskeletal regulation by Rho GTPase (P00016)	1	0.7%	3.6%
+9	PDGF signaling pathway (P00047)	3	2.0%	10.7%
+10	Nicotinic acetylcholine receptor signaling pathway (P00044)	1	0.7%	3.6%
+11	Cell cycle (P00013)	1	0.7%	3.6%
+12	Muscarinic acetylcholine receptor 2 and 4 signaling pathway (P00043)	1	0.7%	3.6%
+13	Muscarinic acetylcholine receptor 1 and 3 signaling pathway (P00042)	1	0.7%	3.6%
+14	Huntington disease (P00029)	1	0.7%	3.6%
+15	p53 pathway (P00059)	2	1.3%	7.1%
+16	Pyruvate metabolism (P02772)	1	0.7%	3.6%
+17	Heterotrimeric G-protein signaling pathway-Gq alpha and Go alpha mediated pathway (P00027)	2	1.3%	7.1%
+18	Wnt signaling pathway (P00057)	1	0.7%	3.6%
+19	Heterotrimeric G-protein signaling pathway-Gi alpha and Gs alpha mediated pathway (P00026)	2	1.3%	7.1%
+20	Synaptic vesicle trafficking (P05734)	1	0.7%	3.6%
+21	FGF signaling pathway (P00021)	1	0.7%	3.6%

@@ -1,0 +1,6 @@
+1	synapse (GO:0045202)	2	1.3%	2.1%
+2	membrane (GO:0016020)	13	8.6%	13.5%
+3	protein-containing complex (GO:0032991)	7	4.6%	7.3%
+4	organelle (GO:0043226)	27	17.9%	28.1%
+5	extracellular region (GO:0005576)	1	0.7%	1.0%
+6	cell (GO:0005623)	46	30.5%	47.9%
