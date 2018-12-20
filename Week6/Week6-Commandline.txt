@@ -1,0 +1,14 @@
+  532  tar -xJf g1e.tar.xz
+  533  conda create -n macs2 macs2
+  542  bowtie2-build chr19.fa chr19_afterindex
+  543  bowtie2 -p 4 -x chr19_indexed ~/qbb2018-answers/Week6/g1e/input_ER4.fastq > input_ER4.sam
+  544  bowtie2 -p 4 -x chr19_afterindex ~/qbb2018-answers/Week6/g1e/input_ER4.fastq > input_ER4.sam
+  545  bowtie2 -p 4 -x chr19_afterindex ~/qbb2018-answers/Week6/g1e/input_G1E.fastq > input_G1E.sam
+  546  bowtie2 -p 4 -x chr19_afterindex ~/qbb2018-answers/Week6/g1e/CTCF_G1E.fastq > CTCF_G1E.sam
+  547  bowtie2 -p 4 -x chr19_afterindex ~/qbb2018-answers/Week6/g1e/CTCF_ER4.fastq > CTCF_ER4.sam
+  548  source activate macs2
+  550  macs2 callpeak -t CTCF_G1E.sam -f SAM -g 60000000 -n G1E --outdir G1E
+  551  macs2 callpeak -t CTCF_ER4.sam -f SAM -g 60000000 -n ER4 --outdir ER4
+  552  bedtools intersect -a G1E/G1E_peaks.narrowPeak -b ER4/ER4_peaks.narrowPeak -v > Lost-CTCF.bed
+  553  bedtools intersect -a ER4/ER4_peaks.narrowPeak -b G1E/G1E_peaks.narrowPeak -v > Gained-CTCF.bed
+  554  history > Week6-Commandline.txt
