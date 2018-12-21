@@ -38,7 +38,7 @@ for line in open(sys.argv[1]):
         Fea[site] = fields[3]
 #print(Fea)
 
-for i, line in enumerate(open(sys.argv[2])):
+for line in open(sys.argv[2]):
     fields = line.rstrip("\r\n").split("\t")
     startsite = int(fields[1])
     endsite = int(fields[2])
@@ -64,7 +64,7 @@ for i in Gain_list:
                 exon_gained += 1
 # print(promoter_gained, exon_gained, intron_gained)
 
-for i, line in enumerate(open(sys.argv[3])):
+for line in open(sys.argv[3]):
     fields = line.rstrip("\r\n").split("\t")
     startsite = int(fields[1])
     endsite = int(fields[2])
