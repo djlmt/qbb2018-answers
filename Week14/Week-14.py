@@ -60,7 +60,7 @@ sc.tl.rank_genes_groups(filtered_data, groupby = "louvain", method = "logreg")
 sc.pl.rank_genes_groups(filtered_data, save = "logisticreg.png")
 
 #Droplot#
-sc.pl.rank_genes_groups_dotplot(filtered_data, groupby="louvain", save = "Dotplot.png")
+sc.pl.rank_genes_groups_dotplot(filtered_data, groupby = "louvain", save = "Dotplot.png")
 
 #Identifying cell types#
 sc.tl.tsne(filtered_data)
