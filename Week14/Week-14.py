@@ -5,7 +5,7 @@ Usage: ./Week-14.py
 
 Environment prep
 conda create -n scanpy2 scanpy numpy matplotlib python=3.6
-conda activate scanpy2
+source activate scanpy2
 
 Step 1: Filtering
 Filtering tools are largely under the sc.pp module. I would suggest using the Zheng et al. 2017 filtering approach. Produce a PCA plot before and after filtering (see the sc.api.tl module to actually perform the PCA and sc.api.pl for plotting).
@@ -55,8 +55,12 @@ sc.pl.tsne(filtered_data, save = "Tsne.png")
 #Distinguishing genes using the t-test and logistic regression appraoches#
 sc.tl.rank_genes_groups(filtered_data, groupby = "louvain", method = "t-test")
 sc.pl.rank_genes_groups(filtered_data, save = "ttest.png")
+
 sc.tl.rank_genes_groups(filtered_data, groupby = "louvain", method = "logreg")
 sc.pl.rank_genes_groups(filtered_data, save = "logisticreg.png")
+
+#Droplot#
+sc.pl.rank_genes_groups_dotplot(filtered_data, groupby="louvain", save = "Dotplot.png")
 
 #Identifying cell types#
 sc.tl.tsne(filtered_data)
@@ -70,4 +74,5 @@ sc.pl.tsne(filtered_data, color = ["louvain", "Tcf4"], save = "Marker_gene_7.png
 sc.pl.tsne(filtered_data, color = ["louvain", "Ubb"], save = "Marker_gene_8.png")
 sc.pl.tsne(filtered_data, color = ["louvain", "Nrxn3"], save = "Marker_gene_9.png")
 
-#sc.pl.rank_genes_group_dotplot(filtered_adata, groupby = "louvain", use_raw = None, log = False, num_categories = 7, color_map = "Reds", figsize = None, dendrogram = False, var_group_positions = None, var_group_labels = None, var_group_rotation = None, show = None, save = "dotplot.png")
+
+
